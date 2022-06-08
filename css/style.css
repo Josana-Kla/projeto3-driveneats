@@ -1,6 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
 /*
-font-family: 'Righteous', cursive;
-font-family: 'Roboto', sans-serif;
+
 */
+
+@media (max-width: 614px) {
+  * {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .top {
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+
+    display: flex;    /*outro*/
+    flex-direction: column;
+    justify-content: center;    
+
+    height: 92px;
+  }
+  
+  .top h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+  }
+
+  .top h2 {
+    font-size: 18px;
+  }
+
+
+
+
+}
+
