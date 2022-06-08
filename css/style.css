@@ -35,7 +35,7 @@
   }
 
   .main-content {
-    margin-top: 92px;
+    margin: 92px 0 92px 0;
     padding: 31px 0 16px 19px; 
 
     background-color: #EEEEEE;
@@ -87,6 +87,35 @@
   .order-options p:last-of-type {
     font-size: 16px;
     color: #000000;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    height: 92px;
+  }
+
+  footer button {
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    border: none;
+
+    width: 364px;
+    height: 61px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 0.29px;
+    padding: 0 15%;
   }
 
 }
