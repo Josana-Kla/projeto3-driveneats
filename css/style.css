@@ -12,9 +12,14 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #FFFFFF;
 
-    display: flex;    /*outro*/
+    display: flex;    /*outro e fixar top*/
     flex-direction: column;
     justify-content: center;    
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 
     height: 92px;
     padding-left: 21px;
@@ -29,7 +34,12 @@
     font-size: 18px;
   }
 
+  .main-content {
+    margin-top: 92px;
+    padding: 31px 0 16px 19px; 
 
+    background-color: #EEEEEE;
+  }
 
 
 
