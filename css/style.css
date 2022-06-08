@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
-/*
-
-*/
 
 @media (max-width: 614px) {
   * {
@@ -20,6 +17,7 @@
     justify-content: center;    
 
     height: 92px;
+    padding-left: 21px;
   }
   
   .top h1 {
@@ -30,6 +28,7 @@
   .top h2 {
     font-size: 18px;
   }
+
 
 
 
