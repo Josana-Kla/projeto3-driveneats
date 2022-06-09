@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
+/*
+body {
+  display: none;    arrumar para o desktop
+} 
+*/
 
 @media (max-width: 614px) {
   * {
@@ -9,7 +14,7 @@
 
   .top {
     background-color: #CF2B2B;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  /*rever*/
     color: #FFFFFF;
 
     display: flex;    /*outro e fixar top*/
@@ -47,7 +52,7 @@
     color: #333333;
   }
 
-  .order-options span {
+  .line-options {
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -57,7 +62,7 @@
     overflow-x: scroll;
   }
 
-  .order-options div {
+  .line-options div {
     background-color: #FFFFFF;
     box-shadow: 0 0 10 -4 rgba(0, 0, 0, 0.25);
     border-radius: 9px;
@@ -72,21 +77,33 @@
     height: 216px;
   }
 
-  .order-options h4 {
+  .line-options h4 {
     font-size: 16px;
     font-weight: bold;
     color: #333333;
   }
 
-  .order-options p:first-of-type {
+  .line-options p {
     font-size: 15px;
     font-weight: 300;
     color: #A6A6A6;
   }
 
-  .order-options p:last-of-type {
+  .line-options span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .line-options span p {
     font-size: 16px;
+    font-weight: normal;
     color: #000000;
+  }
+
+  .line-options span ion-icon {
+    width: 19px;
+    height: 19px;
   }
 
   footer {
@@ -115,7 +132,7 @@
     color: #FFFFFF;
     font-size: 20px;
     letter-spacing: 0.29px;
-    padding: 0 15%;
+    padding: 1% 15%;  /*rever quando diminui a tela*/
   }
 
 }
