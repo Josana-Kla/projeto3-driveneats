@@ -25,6 +25,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
 
     height: 92px;
     padding-left: 21px;
@@ -46,7 +47,7 @@ body {
     background-color: #EEEEEE;
   }
 
-  .main-content h3 {
+  .order-options h3 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
     color: #333333;
@@ -75,6 +76,10 @@ body {
 
     width: 172px;
     height: 216px;
+  }
+
+  .select {
+    border: 10px solid green;
   }
 
   .line-options h4 {
@@ -126,7 +131,7 @@ body {
     border-radius: 50px;
     border: none;
 
-    width: 364px;
+    max-width: 364px;
     height: 61px;
 
     color: #FFFFFF;
@@ -134,6 +139,54 @@ body {
     letter-spacing: 0.29px;
     padding: 1% 15%;  /*rever quando diminui a tela*/
   }
+  
+  /*
+  .new-body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(238, 238, 238, 1);
+  }
+
+  .order-confirmation {
+    width: 377px;
+    height: 353px;
+
+    background-color: #50D074;
+    border-radius: 9px;
+  }
+
+  .order-content {
+    width: 90%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+  }
+
+  .order-content div {
+    background-color: #CBCBCB;
+
+    height: 160px;
+  }
+
+  .order-content span {
+    background-color: #923434;
+
+  }
+
+  /*
+  .hidden {
+    display: none;
+  }
+*/
 
 }
 

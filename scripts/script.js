@@ -16,3 +16,13 @@ if(selecao DIV firstDish === 1 && drink === 1 && desert === 1) {
   faz o botão mudar para 'fechar pedido';
 }
 */
+
+function selectFood(element) {
+  let eachOption = document.querySelector('.select'); /*peguei o elemento, selecionei e acrescentei a classe select (aparece a borda verde) */
+
+  if (eachOption !== null) {
+    eachOption.classList.remove('select');
+  } 
+  
+  element.classList.add("select");
+}

@@ -20,7 +20,7 @@
     <div class="order-options">
       <h3>Primeiro, seu prato</h3>
       <span class="line-options">
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/yin-yang-chicken.png" alt="chicken ying yang">
           <h4>Frango Yin Yang</h4>
           <p>Um pouco de batata, um pouco de salada</p>
@@ -30,7 +30,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/yin-yang-chicken.png" alt="chicken ying yang">
           <h4>Frango Yin Yang</h4>
           <p>Um pouco de batata, um pouco de salada</p>
@@ -40,7 +40,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/yin-yang-chicken.png" alt="chicken ying yang">
           <h4>Frango Yin Yang</h4>
           <p>Um pouco de batata, um pouco de salada</p>
@@ -50,7 +50,7 @@
           </span>
         </div>
 
-         <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/yin-yang-chicken.png" alt="chicken ying yang">
           <h4>Frango Yin Yang</h4>
           <p>Um pouco de batata, um pouco de salada</p>
@@ -65,7 +65,7 @@
     <div class="order-options">
       <h3>Agora, sua bebida</h3>
       <span class="line-options">
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/cold-coke.png" alt="cold coke">
           <h4>Coquinha gelada</h4>
           <p>Lata 350ml</p>
@@ -75,7 +75,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/cold-coke.png" alt="cold coke">
           <h4>Coquinha gelada</h4>
           <p>Lata 350ml</p>
@@ -85,7 +85,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/cold-coke.png" alt="cold coke">
           <h4>Coquinha gelada</h4>
           <p>Lata 350ml</p>
@@ -95,7 +95,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/cold-coke.png" alt="cold coke">
           <h4>Coquinha gelada</h4>
           <p>Lata 350ml</p>
@@ -110,7 +110,7 @@
     <div class="order-options">
       <h3>Por fim, sua sobremesa</h3>
       <span class="line-options">
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/pudim.png" alt="pudim">
           <h4>Pudim</h4>
           <p>Apenas pudim</p>
@@ -120,7 +120,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/pudim.png" alt="pudim">
           <h4>Pudim</h4>
           <p>Apenas pudim</p>
@@ -130,7 +130,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/pudim.png" alt="pudim">
           <h4>Pudim</h4>
           <p>Apenas pudim</p>
@@ -140,7 +140,7 @@
           </span>
         </div>
 
-        <div>
+        <div onclick="selectFood(this)">
           <img src="./assets/img/pudim.png" alt="pudim">
           <h4>Pudim</h4>
           <p>Apenas pudim</p>
@@ -158,9 +158,35 @@
   <footer>
     <button>Selecione os 3 itens para fechar o pedido</button>
   </footer>
-  
 
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <div class="new-body hidden">
+
+<!--
+
+    <div class="order-confirmation">
+      <div class="order-content">
+        <h1>Confirme seu pedido</h1>
+        <div>
+          <span>
+            <p>Frango Yin Yang</p>
+            <p>14,90</p>
+          </span>
+          <span>
+            <p>Coquinha gelada</p>
+            <p>4,90</p>
+          </span>
+        </div>
+        <button>Tudo certo, pode pedir!</button>
+        <p>Cancelar</p>
+      </div>
+    </div>
+
+  </div>
+
+  -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   
   <script src="./scripts/script.js"></script>
 </body>
