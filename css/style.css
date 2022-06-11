@@ -56,16 +56,19 @@ body {
   .line-options {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 16px;
 
-    margin: 17px 0 27px 0;
+    margin: 10px 0 27px 0;
+
+    height: 230px;
 
     overflow-x: scroll;
   }
 
   .line-options div {
+    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
     background-color: #FFFFFF;
-    box-shadow: 0 0 10 -4 rgba(0, 0, 0, 0.25);
     border-radius: 9px;
 
     padding: 10px 14px 10px 14px;
@@ -75,11 +78,11 @@ body {
     justify-content: space-evenly;
 
     width: 172px;
-    height: 216px;
+    height: 202px;
   }
 
-  .select {
-    border: 10px solid green;
+  .line-options .select {
+    box-shadow: inset 0px 0px 0 5px rgba(50, 183, 47, 1);
   }
 
   .line-options h4 {
@@ -109,6 +112,8 @@ body {
   .line-options span ion-icon {
     width: 19px;
     height: 19px;
+
+    color: #32B72F;
   }
 
   footer {
@@ -131,13 +136,17 @@ body {
     border-radius: 50px;
     border: none;
 
-    max-width: 364px;
+    width: 364px;
     height: 61px;
 
     color: #FFFFFF;
     font-size: 20px;
     letter-spacing: 0.29px;
     padding: 1% 15%;  /*rever quando diminui a tela*/
+  }
+
+  .buttonColor {
+    background-color: #32B72F;
   }
   
   /*

@@ -13,7 +13,7 @@ let food;
 let drink;
 let desert;
 
-/* SELECIONAR COMIDA, BEBIDA E SOBREMESA: */
+/* SELECIONAR COMIDA, BEBIDA E SOBREMESA: ADD O ICONE */
 
 function selectFood(element) {
   food = element.innerHTML;
@@ -59,19 +59,18 @@ function selectDesert(element) {
 
 /* SE UM DE CADA ESTIVER SELECIONADO ANTERIORMENTE, BOTÃO FICA VERDE E MUDA ESCRITA: */
 
-/*
-if(selecao DIV firstDish === 1 && drink === 1 && desert === 1) {
-  faz o botão mudar para 'fechar pedido';
-}
-*/
-/*Chamei a função abaixo dentro das funções anteriores */
+
+/* Chamei a função abaixo dentro das funções anteriores e declarei as variaveis no escopo global e atribui o elemento de cada função ao colocar essas variaveis dentro de cada função */
 function checkPreviousSelection() {
 
   let catchButton = document.querySelector("footer button");
 
   if(food && drink && desert) {
-    catchButton.classList.add("select");
-    catchButton.innerHTML = "opaaa";
+    catchButton.classList.add("buttonColor");
+    catchButton.innerHTML = "Fechar pedido";
   } 
-
 }
+
+/* ABRIR A TELA DE CONFIRMAÇÃO DO PEDIDO */
+
+
