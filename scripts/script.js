@@ -13,21 +13,25 @@ let food;
 let drink;
 let desert;
 
-/* SELECIONAR COMIDA, BEBIDA E SOBREMESA: ADD O ICONE */
+
+
+/* SELECIONAR COMIDA, BEBIDA E SOBREMESA: */
 
 function selectFood(element) {
   food = element.innerHTML;
 
   let buttonClicked = document.querySelector('.select'); /* peguei o elemento que tem a classe select, por enquanto, nenhum */
-
+ 
   if (buttonClicked !== null) {
     buttonClicked.classList.remove('select');
   } 
   
   element.classList.add("select");
 
+  iconSelected();
   checkPreviousSelection();
 }
+
 
 function selectDrink(element) {
   drink = element.innerHTML;
@@ -40,6 +44,7 @@ function selectDrink(element) {
   
   element.classList.add("select");
 
+  iconSelected();
   checkPreviousSelection();
 }
 
@@ -54,7 +59,21 @@ function selectDesert(element) {
   
   element.classList.add("select");
 
+  iconSelected();
   checkPreviousSelection();
+}
+
+
+/* ADD O ÍCONE VERDE */
+
+function iconSelected() {
+  let icon = document.querySelector("ion-icon");
+
+  if(icon !== null) {
+    icon.classList.remove("hidden");
+    icon.classList.add("active-ion-icon");
+  }
+
 }
 
 /* SE UM DE CADA ESTIVER SELECIONADO ANTERIORMENTE, BOTÃO FICA VERDE E MUDA ESCRITA: */

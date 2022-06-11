@@ -109,11 +109,17 @@ body {
     color: #000000;
   }
 
-  .line-options span ion-icon {
+  .active-ion-icon {
+    display: flex;
+    
     width: 19px;
     height: 19px;
-
+    
     color: #32B72F;
+  }
+  
+  .hidden {
+    display: none;
   }
 
   footer {
@@ -148,7 +154,7 @@ body {
   .buttonColor {
     background-color: #32B72F;
   }
-  
+ 
   /*
   .new-body {
     width: 100vw;
@@ -190,12 +196,9 @@ body {
     background-color: #923434;
 
   }
-
-  /*
-  .hidden {
-    display: none;
-  }
 */
+
+
 
 }
 
