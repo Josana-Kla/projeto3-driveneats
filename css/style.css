@@ -109,6 +109,10 @@ body {
     color: #000000;
   }
 
+  .hidden {
+    display: none;
+  }
+  
   .active-ion-icon {
     display: flex;
     
@@ -116,10 +120,6 @@ body {
     height: 19px;
     
     color: #32B72F;
-  }
-  
-  .hidden {
-    display: none;
   }
 
   footer {
@@ -134,7 +134,8 @@ body {
     bottom: 0;
     left: 0;
 
-    height: 92px;
+    min-height: 92px;
+    max-height: 106px;
   }
 
   footer button {
@@ -143,20 +144,21 @@ body {
     border: none;
 
     width: 364px;
-    height: 61px;
+    min-height: 61px;
+    max-height: 99px;
 
     color: #FFFFFF;
     font-size: 20px;
     letter-spacing: 0.29px;
-    padding: 1% 15%;  /*rever quando diminui a tela*/
+    padding: 0 82px;  /*rever quando diminui a tela*/
   }
 
   .buttonColor {
     background-color: #32B72F;
   }
  
-  /*
-  .new-body {
+  
+  .new-window {
     width: 100vw;
     height: 100vh;
 
@@ -164,7 +166,12 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(238, 238, 238, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   .order-confirmation {
@@ -172,33 +179,69 @@ body {
     height: 353px;
 
     background-color: #50D074;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-  }
+    padding: 0 26px;
 
-  .order-content {
-    width: 90%;
-    height: 90%;
+    color: #FFFFFF;
+    font-size: 22px;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     
+  }
+
+  .order-confirmation h1 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .order-description {
+    margin-top: 10px;
+  }
+
+  .order-description span {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 0 13px 0;
+  }
+
+  .order-confirmation div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
+    gap: 22px;
   }
 
-  .order-content div {
-    background-color: #CBCBCB;
+  .order-confirmation button {
+    width: 329px;
+    height: 52px;
 
-    height: 160px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    border: none;
+
+    align-self: center;
+
+    color: #50D074;
+    font-size: 22px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
   }
 
-  .order-content span {
-    background-color: #923434;
+  .order-confirmation a {
+    text-decoration: none;
+    color: currentColor;
 
+    font-weight: bold;
+    font-size: 20px;
+
+    letter-spacing: 1px;
   }
-*/
-
-
 
 }
 

@@ -26,7 +26,7 @@
           <p>Um pouco de batata, um pouco de salada</p>
           <span>
             <p>R$ 14,90</p>
-            <ion-icon class="hidden" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
+            <ion-icon class="hidden" onclick="iconSelected(this)" name="checkmark-circle"></ion-icon>
           </span>
         </div>
 
@@ -36,7 +36,7 @@
           <p>Um pouco de batata, um pouco de salada</p>
           <span>
             <p>R$ 14,90</p>
-            <ion-icon class="hidden" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
+            <ion-icon class="hidden" onclick="iconSelected(this)" name="checkmark-circle"></ion-icon>
           </span>
         </div>
 
@@ -46,7 +46,7 @@
           <p>Um pouco de batata, um pouco de salada</p>
           <span>
             <p>R$ 14,90</p>
-            <ion-icon class="hidden" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
+            <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
           </span>
         </div>
 
@@ -159,32 +159,40 @@
     <button onclick="checkPreviousSelection()">Selecione os 3 itens para fechar o pedido</button>
   </footer>
 
-  <!--
-  <div class="new-body hidden">
+  
+  <div class="new-window ">
 
-
-
-    <div class="order-confirmation">
-      <div class="order-content">
-        <h1>Confirme seu pedido</h1>
-        <div>
-          <span>
-            <p>Frango Yin Yang</p>
-            <p>14,90</p>
-          </span>
-          <span>
-            <p>Coquinha gelada</p>
-            <p>4,90</p>
-          </span>
-        </div>
-        <button>Tudo certo, pode pedir!</button>
-        <p>Cancelar</p>
+    <div class="order-confirmation"> 
+      <h1>Confirme seu pedido</h1>
+      
+      <div class="order-description">
+        <span>
+          <p>Frango Yin Yang</p>
+          <p>14,90</p>
+        </span>
+        <span>
+          <p>Coquinha gelada</p>
+          <p>4,90</p>
+        </span>
+        <span>
+          <p>Pudim</p>
+          <p>7,90</p>
+        </span>
+        <span>
+          <p><strong>TOTAL</strong></p>
+          <p><strong>R$ 27,90</strong></p>
+        </span>
       </div>
+      
+      <div>
+        <button>Tudo certo, pode pedir!</button>
+        <a href="#">Cancelar</a>
+      </div>
+      
     </div>
-
   </div>
 
-  -->
+  
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
