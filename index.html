@@ -26,7 +26,7 @@
           <p>Um pouco de batata, um pouco de salada</p>
           <span>
             <p>R$ 16,90</p>
-            <ion-icon class="hidden" onclick="iconSelected(this)" name="checkmark-circle"></ion-icon>
+            <ion-icon class="hidden-icon" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
           </span>
         </div>
 
@@ -36,7 +36,7 @@
           <p>Feita pelo chef</p>
           <span>
             <p>R$ 20,90</p>
-            <ion-icon class="hidden" onclick="iconSelected(this)" name="checkmark-circle"></ion-icon>
+            <ion-icon class="hidden-icon" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
           </span>
         </div>
 
@@ -46,7 +46,7 @@
           <p>700g</p>
           <span>
             <p>R$ 18,90</p>
-            <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+            <ion-icon class="hidden-icon" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
           </span>
         </div>
 
@@ -156,7 +156,7 @@
   </div>
 
   <footer>
-    <button onclick="checkPreviousSelection()">Selecione os 3 itens para fechar o pedido</button>
+    <button onclick="checkPreviousSelection(); closeOrder();">Selecione os 3 itens para fechar o pedido</button>
   </footer>
 
   

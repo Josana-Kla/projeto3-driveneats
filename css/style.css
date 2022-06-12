@@ -249,5 +249,9 @@ body {
     color: #32B72F;
   }
 
+  .hidden-icon {
+    visibility: hidden;
+  }
+
 }
 

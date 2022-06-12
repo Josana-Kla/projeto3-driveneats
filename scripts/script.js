@@ -69,16 +69,15 @@ function selectDesert(element) {
 
 /* ADD O ÍCONE VERDE */
 
-function iconSelected(element) {
-  let icon = document.querySelector(".hidden");
+function iconSelected() {
+  let icon = document.querySelector(".hidden-icon");
 
   if(icon !== null) { 
-    icon.classList.remove("hidden");
+    icon.classList.remove("hidden-icon");
     icon.classList.add("active-ion-icon");
   }
 
-  element.classList.add("hidden");
-
+  icon.classList.remove("hidden-icon");
 }
 
 
@@ -98,4 +97,8 @@ function checkPreviousSelection() {
 
 /* ABRIR A TELA DE CONFIRMAÇÃO DO PEDIDO */
 
+function closeOrder() {
+  let orderWindow = document.querySelector(".new-window");
+  orderWindow.classList.remove("hidden");
 
+}
