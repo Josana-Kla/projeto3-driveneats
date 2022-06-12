@@ -13,13 +13,17 @@ let food;
 let drink;
 let desert;
 
-
+let foodSelected;
+let priceFoodSelected;
 
 /* SELECIONAR COMIDA, BEBIDA E SOBREMESA: */
 
 function selectFood(element) {
   food = element.innerHTML;
 
+  foodSelected = document.querySelector('.food-one h4').innerHTML;
+  priceFoodSelected = document.querySelector('.price-food-one').innerHTML;
+ 
   let buttonClicked = document.querySelector('.select'); /* peguei o elemento que tem a classe select, por enquanto, nenhum */
 
   if (buttonClicked !== null) {     /*se o botao NAO estiver clicado, ele é null. Se estiver clicado, ele NÃO é null. 
@@ -35,9 +39,14 @@ function selectFood(element) {
   checkPreviousSelection();
 }
 
+let drinkSelected;
+let priceDrinkSelected;
 
 function selectDrink(element) {
   drink = element.innerHTML;
+
+  drinkSelected = document.querySelector('.drink-one h4').innerHTML;
+  priceDrinkSelected = document.querySelector('.price-drink-one').innerHTML;
 
   let buttonClicked = document.querySelector('.select-drink .select');
 
@@ -51,8 +60,14 @@ function selectDrink(element) {
   checkPreviousSelection();
 }
 
+let desertSelected;
+let priceDesertSelected;
+
 function selectDesert(element) {
   desert = element.innerHTML;
+
+  desertSelected = document.querySelector('.desert-one h4').innerHTML;
+  priceDesertSelected = document.querySelector('.price-desert-one').innerHTML;
 
   let buttonClicked = document.querySelector('.select-desert .select');
 
@@ -96,9 +111,56 @@ function checkPreviousSelection() {
 }
 
 /* ABRIR A TELA DE CONFIRMAÇÃO DO PEDIDO */
+let orderWindow;
 
 function closeOrder() {
-  let orderWindow = document.querySelector(".new-window");
-  orderWindow.classList.remove("hidden");
+  orderWindow = document.querySelector(".new-window").classList.remove("hidden");
 
+  /* COMIDAS - PEGAR NOMES */
+  let firstNameFoodOrder = document.querySelector(".food-confirmation");
+  firstNameFoodOrder.innerHTML = `${foodSelected}`;
+
+  /* COMIDAS - PEGAR PREÇOS */
+  let firstPriceFoodOrder = document.querySelector(".price-food-confirmation");
+  firstPriceFoodOrder.innerHTML = `${priceFoodSelected}`;
+
+
+  /* BEBIDAS - PEGAR NOMES */
+  let firstNameDrinkOrder = document.querySelector(".drink-confirmation");
+  firstNameDrinkOrder.innerHTML = `${drinkSelected}`;
+
+  /* BEBIDAS - PEGAR PREÇOS */
+  let firstPriceDrinkOrder = document.querySelector(".price-drink-confirmation");
+  firstPriceDrinkOrder.innerHTML = `${priceDrinkSelected}`;
+
+
+  /* SOBREMESAS - PEGAR NOMES */
+  let firstNameDesertOrder = document.querySelector(".desert-confirmation");
+  firstNameDesertOrder.innerHTML = `${desertSelected}`;
+
+  /* SOBREMESAS - PEGAR PREÇOS */
+  let firstPriceDesertOrder = document.querySelector(".price-desert-confirmation");
+  firstPriceDesertOrder.innerHTML = `${priceDesertSelected}`;
+}
+
+/* CONFIRMAR E IR PARA O WHATSAPP: */
+
+function yourOrder() {
+  document.querySelector(".confirm-or-cancel-buttons button");
+
+  let finalMessage = 
+  "Olá, gostaria de fazer o pedido: \n\
+  - Prato: Frango Yin Yang \n\
+  - Bebida: Coquinha Gelada \n\
+  - Sobremesa: Pudim \n\
+  Total: R$ 27.70";
+
+  let linkAndMessage = "https://wa.me/5534984258067?text=" + encodeURIComponent(finalMessage);
+  window.open(linkAndMessage, '_blank');
+}
+
+/* CANCELAR E VOLTAR PARA OS PEDIDOS */
+
+function cancel() {
+  orderWindow = document.querySelector(".new-window").classList.add("hidden");
 }

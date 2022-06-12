@@ -20,12 +20,12 @@
     <div class="order-options">
       <h3>Primeiro, seu prato</h3>
       <span class="line-options">
-        <div onclick="selectFood(this)">
+        <div class="food-one" onclick="selectFood(this)">
           <img src="./assets/img/yin-yang-chicken.png" alt="chicken ying yang">
           <h4>Frango Yin Yang</h4>
           <p>Um pouco de batata, um pouco de salada</p>
           <span>
-            <p>R$ 16,90</p>
+            <p class="price-food-one">R$ 16,90</p>
             <ion-icon class="hidden-icon" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
           </span>
         </div>
@@ -65,12 +65,12 @@
     <div class="order-options">
       <h3>Agora, sua bebida</h3>
       <span class="line-options select-drink">
-        <div onclick="selectDrink(this)">
+        <div class="drink-one" onclick="selectDrink(this)">
           <img src="./assets/img/cold-coke.png" alt="cold coke">
           <h4>Coquinha gelada</h4>
           <p>Lata 350ml</p>
           <span>
-            <p>R$ 4,90</p>
+            <p class="price-drink-one">R$ 4,90</p>
             <ion-icon class="hidden" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
           </span>
         </div>
@@ -110,12 +110,12 @@
     <div class="order-options">
       <h3>Por fim, sua sobremesa</h3>
       <span class="line-options select-desert">
-        <div onclick="selectDesert(this)">
+        <div class="desert-one" onclick="selectDesert(this)">
           <img src="./assets/img/pudim.png" alt="pudim">
           <h4>Pudim</h4>
           <p>Apenas pudim</p>
           <span>
-            <p>R$ 7,90</p>
+            <p class="price-desert-one">R$ 7,90</p>
             <ion-icon class="hidden" onclick="iconSelected()" name="checkmark-circle"></ion-icon>
           </span>
         </div>
@@ -167,16 +167,16 @@
       
       <div class="order-description">
         <span>
-          <p>Frango Yin Yang</p>
-          <p>14,90</p>
+          <p class="food-confirmation"></p>
+          <p class="price-food-confirmation">14,90</p>
         </span>
         <span>
-          <p>Coquinha gelada</p>
-          <p>4,90</p>
+          <p class="drink-confirmation"></p>
+          <p class="price-drink-confirmation">4,90</p>
         </span>
         <span>
-          <p>Pudim</p>
-          <p>7,90</p>
+          <p class="desert-confirmation"></p>
+          <p class="price-desert-confirmation">7,90</p>
         </span>
         <span>
           <p><strong>TOTAL</strong></p>
@@ -184,9 +184,9 @@
         </span>
       </div>
       
-      <div>
-        <button>Tudo certo, pode pedir!</button>
-        <a href="#">Cancelar</a>
+      <div class="confirm-or-cancel-buttons">
+        <button onclick="yourOrder();">Tudo certo, pode pedir!</button>
+        <a onclick="cancel();">Cancelar</a>
       </div>
       
     </div>
