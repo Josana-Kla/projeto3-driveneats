@@ -148,12 +148,19 @@ function closeOrder() {
 function yourOrder() {
   document.querySelector(".confirm-or-cancel-buttons button");
 
+  let nameClient = prompt("Digite seu nome: ");
+  let adressClient = prompt("Digite seu endereço: ");
+
   let finalMessage = 
-  "Olá, gostaria de fazer o pedido: \n\
+  `Olá, gostaria de fazer o pedido: \n\
   - Prato: Frango Yin Yang \n\
   - Bebida: Coquinha Gelada \n\
   - Sobremesa: Pudim \n\
-  Total: R$ 27.70";
+  Total: R$ ${2}  \n\
+
+  Nome: ${nameClient}
+  Endereço: ${adressClient}
+  `;
 
   let linkAndMessage = "https://wa.me/5534984258067?text=" + encodeURIComponent(finalMessage);
   window.open(linkAndMessage, '_blank');
