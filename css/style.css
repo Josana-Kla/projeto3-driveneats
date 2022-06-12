@@ -81,6 +81,12 @@ body {
     height: 202px;
   }
 
+  .line-options div img {
+    width: 144px;
+    height: 82px;
+    border-radius: 4px;
+  }
+
   .line-options .select {
     box-shadow: inset 0px 0px 0 5px rgba(50, 183, 47, 1);
   }
@@ -107,19 +113,6 @@ body {
     font-size: 16px;
     font-weight: normal;
     color: #000000;
-  }
-
-  .hidden {
-    display: none;
-  }
-  
-  .active-ion-icon {
-    display: flex;
-    
-    width: 19px;
-    height: 19px;
-    
-    color: #32B72F;
   }
 
   footer {
@@ -241,6 +234,19 @@ body {
     font-size: 20px;
 
     letter-spacing: 1px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .active-ion-icon {
+    display: flex;
+    
+    width: 19px;
+    height: 19px;
+    
+    color: #32B72F;
   }
 
 }
