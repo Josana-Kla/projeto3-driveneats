@@ -14,16 +14,18 @@ let drink;
 let desert;
 
 let foodSelected;
-let priceFoodSelected;
 
+let priceFoodSelected;
+let priceFoodSelectedTwo;
 
 /* SELECIONAR COMIDA, BEBIDA E SOBREMESA: */
 
 function selectFood(element) {
   food = element.innerHTML;
 
-  foodSelected = document.querySelector('.food-one h4').innerHTML;
-  priceFoodSelected = document.querySelector('.price-food span').innerHTML;
+  foodSelected = document.querySelector('.food-one h4').innerHTML
+  priceFoodSelected = document.querySelectorAll('.price-food span').innerHTML;
+  priceFoodSelectedTwo = document.querySelector('.price-food-two span').innerHTML;
  
   let buttonClicked = document.querySelector('.select'); /* peguei o elemento que tem a classe select, por enquanto, nenhum */
   document.querySelector('.actived');
@@ -36,8 +38,53 @@ function selectFood(element) {
   element.classList.add("select"); 
   element.classList.add("actived"); 
 
-  iconSelected();
+  iconSelected(element, "icon-food");
   checkPreviousSelection();
+  searchPriceFood(element);
+  searchNameFood(element);
+}
+
+let newPriceFood;
+let newPriceDrink;
+let newPriceDesert;
+
+function searchPriceFood(element) {
+  let priceFood = element.children[3].children[0].children[0];
+  newPriceFood = priceFood.innerHTML;
+}
+
+function searchPriceDrink(element) {
+  let priceDrink = element.children[3].children[0].children[0];
+  newPriceDrink = priceDrink.innerHTML;
+}
+
+function searchPriceDesert(element) {
+  let priceDesert = element.children[3].children[0].children[0];
+  newPriceDesert = priceDesert.innerHTML;
+}
+
+let newNameFood;
+let newNameDrink;
+let newNameDesert;
+
+function searchNameFood(element) {
+  let nameFood = element.children[1];
+  newNameFood = nameFood.innerHTML;
+}
+
+function searchNameDrink(element) {
+  let nameDrink = element.children[1];
+  newNameDrink = nameDrink.innerHTML;
+}
+
+function searchNameDesert(element) {
+  let nameDesert = element.children[1];
+  newNameDesert = nameDesert.innerHTML;
+}
+
+let total; 
+function totalOrder() {
+  total = newPriceFood.replace("," , ".") + Number(newPriceDrink) + Number(newPriceDesert);
 }
 
 let drinkSelected;
@@ -57,8 +104,10 @@ function selectDrink(element) {
   
   element.classList.add("select");
 
-  
+  iconSelected(element, "icon-drink");
   checkPreviousSelection();
+  searchPriceDrink(element);
+  searchNameDrink(element);
 }
 
 let desertSelected;
@@ -77,26 +126,26 @@ function selectDesert(element) {
   } 
   
   element.classList.add("select");
-
   
+  iconSelected(element, "icon-desert");
   checkPreviousSelection();
+  searchPriceDesert(element);
+  searchNameDesert(element);
 }
 
 
 /* ADD O ÍCONE VERDE */
 
-function iconSelected() {
-  document.querySelector(".actived");
-  let icon = document.querySelector(".icon");
+function iconSelected(element, currentIcon) {
+  let icon = element.children[3].children[1];
+  let elementSelected = document.querySelector(`.${currentIcon}.active-ion-icon`);
 
-  if(icon !== null) {
-    icon.classList.remove("active-ion-icon");
+  if(elementSelected !== null) {
+    elementSelected.classList.remove("active-ion-icon");
   }
  
   icon.classList.add("active-ion-icon");
-  icon.classList.add("actived");
   /*document.querySelector(".line-options .select ion-icon").classList.add(".select .active-ion-icon");*/
- 
 }
 
 
@@ -114,37 +163,38 @@ function checkPreviousSelection() {
   } 
 }
 
-/* ABRIR A TELA DE CONFIRMAÇÃO DO PEDIDO */
-let orderWindow;
 
 function closeOrder() {
   orderWindow = document.querySelector(".new-window").classList.remove("hidden");
 
   /* COMIDAS - PEGAR NOMES */
   let firstNameFoodOrder = document.querySelector(".food-confirmation");
-  firstNameFoodOrder.innerHTML = `${foodSelected}`;
+  firstNameFoodOrder.innerHTML = `${newNameFood}`;
 
-  /* COMIDAS - PEGAR PREÇOS */
+  /* COMIDAS - PEGAR PREÇO ATUAL */
   let firstPriceFoodOrder = document.querySelector(".price-food-confirmation");
-  firstPriceFoodOrder.innerHTML = `${priceFoodSelected}`;
+  firstPriceFoodOrder.innerHTML = `${newPriceFood}`;
 
 
   /* BEBIDAS - PEGAR NOMES */
   let firstNameDrinkOrder = document.querySelector(".drink-confirmation");
-  firstNameDrinkOrder.innerHTML = `${drinkSelected}`;
+  firstNameDrinkOrder.innerHTML = `${newNameDrink}`;
 
-  /* BEBIDAS - PEGAR PREÇOS */
+  /* BEBIDAS - PEGAR PREÇO ATUAL */
   let firstPriceDrinkOrder = document.querySelector(".price-drink-confirmation");
-  firstPriceDrinkOrder.innerHTML = `${priceDrinkSelected}`;
+  firstPriceDrinkOrder.innerHTML = `${newPriceDrink}`;
 
 
   /* SOBREMESAS - PEGAR NOMES */
   let firstNameDesertOrder = document.querySelector(".desert-confirmation");
-  firstNameDesertOrder.innerHTML = `${desertSelected}`;
+  firstNameDesertOrder.innerHTML = `${newNameDesert}`;
 
-  /* SOBREMESAS - PEGAR PREÇOS */
+  /* SOBREMESAS - PEGAR PREÇO ATUAL */
   let firstPriceDesertOrder = document.querySelector(".price-desert-confirmation");
-  firstPriceDesertOrder.innerHTML = `${priceDesertSelected}`;
+  firstPriceDesertOrder.innerHTML = `${newPriceDesert}`;
+
+  let totalFinal = document.querySelector(".total");
+  totalFinal.innerHTML = `${total}`;
 }
 
 /* CONFIRMAR E IR PARA O WHATSAPP: */
