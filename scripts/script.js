@@ -23,7 +23,7 @@ function selectFood(element) {
   food = element.innerHTML;
 
   foodSelected = document.querySelector('.food-one h4').innerHTML;
-  priceFoodSelected = document.querySelector('.price-food-one').innerHTML;
+  priceFoodSelected = document.querySelector('.price-food-one span').innerHTML;
  
   let buttonClicked = document.querySelector('.select'); /* peguei o elemento que tem a classe select, por enquanto, nenhum */
   document.querySelector('.actived');
@@ -47,7 +47,7 @@ function selectDrink(element) {
   drink = element.innerHTML;
 
   drinkSelected = document.querySelector('.drink-one h4').innerHTML;
-  priceDrinkSelected = document.querySelector('.price-drink-one').innerHTML;
+  priceDrinkSelected = document.querySelector('.price-drink-one span').innerHTML;
 
   let buttonClicked = document.querySelector('.select-drink .select');
 
@@ -68,7 +68,7 @@ function selectDesert(element) {
   desert = element.innerHTML;
 
   desertSelected = document.querySelector('.desert-one h4').innerHTML;
-  priceDesertSelected = document.querySelector('.price-desert-one').innerHTML;
+  priceDesertSelected = document.querySelector('.price-desert-one span').innerHTML;
 
   let buttonClicked = document.querySelector('.select-desert .select');
 
@@ -158,10 +158,10 @@ function yourOrder() {
   let finalMessage = 
   `
   Olá, gostaria de fazer o pedido: \n\
-  - Prato: ${um} \n\
-  - Bebida: ${dois} \n\
-  - Sobremesa: ${tres} \n\
-  Total: R$ ${total.toFixed(2)}  \n\
+  - Prato: Frango Yin Yang \n\
+  - Bebida: Coquinha Gelada \n\
+  - Sobremesa: Pudim \n\
+  Total: R$ 27.70  \n\
 
   Nome: ${nameClient}
   Endereço: ${adressClient}

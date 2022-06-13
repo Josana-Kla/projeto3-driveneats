@@ -114,7 +114,8 @@ body {
     font-weight: normal;
     color: #000000;
 
-    margin-right: 4px;
+    display: flex;
+    gap: 4px;
   }
 
   footer {
@@ -200,7 +201,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    margin: 0 0 13px 0;
+    margin: 0 0 5px 0;
   }
 
   .order-confirmation div:last-of-type {
