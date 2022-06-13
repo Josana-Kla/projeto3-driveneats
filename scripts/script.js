@@ -16,6 +16,7 @@ let desert;
 let foodSelected;
 let priceFoodSelected;
 
+
 /* SELECIONAR COMIDA, BEBIDA E SOBREMESA: */
 
 function selectFood(element) {
@@ -25,17 +26,17 @@ function selectFood(element) {
   priceFoodSelected = document.querySelector('.price-food-one').innerHTML;
  
   let buttonClicked = document.querySelector('.select'); /* peguei o elemento que tem a classe select, por enquanto, nenhum */
+  document.querySelector('.actived');
 
   if (buttonClicked !== null) {     /*se o botao NAO estiver clicado, ele é null. Se estiver clicado, ele NÃO é null. 
   Se estiver clicado, vou remover o selecionado */
     buttonClicked.classList.remove('select'); 
-  } else {
-    
-    var functionVerde = iconSelected(element);
   }
 
-  element.classList.add("select");  
+  element.classList.add("select"); 
+  element.classList.add("actived"); 
 
+  iconSelected();
   checkPreviousSelection();
 }
 
@@ -85,14 +86,17 @@ function selectDesert(element) {
 /* ADD O ÍCONE VERDE */
 
 function iconSelected() {
-  let icon = document.querySelector(".hidden-icon");
+  document.querySelector(".actived");
+  let icon = document.querySelector(".icon");
 
-  if(icon !== null) { 
-    icon.classList.remove("hidden-icon");
-    icon.classList.add("active-ion-icon");
+  if(icon !== null) {
+    icon.classList.remove("active-ion-icon");
   }
-
-  icon.classList.remove("hidden-icon");
+ 
+  icon.classList.add("active-ion-icon");
+  icon.classList.add("actived");
+  /*document.querySelector(".line-options .select ion-icon").classList.add(".select .active-ion-icon");*/
+ 
 }
 
 
@@ -152,11 +156,12 @@ function yourOrder() {
   let adressClient = prompt("Digite seu endereço: ");
 
   let finalMessage = 
-  `Olá, gostaria de fazer o pedido: \n\
-  - Prato: Frango Yin Yang \n\
-  - Bebida: Coquinha Gelada \n\
-  - Sobremesa: Pudim \n\
-  Total: R$ ${2}  \n\
+  `
+  Olá, gostaria de fazer o pedido: \n\
+  - Prato: ${um} \n\
+  - Bebida: ${dois} \n\
+  - Sobremesa: ${tres} \n\
+  Total: R$ ${total.toFixed(2)}  \n\
 
   Nome: ${nameClient}
   Endereço: ${adressClient}
