@@ -208,9 +208,9 @@ function yourOrder() {
   let finalMessage = 
   `
   Olá, gostaria de fazer o pedido: \n\
-  - Prato: Frango Yin Yang \n\
-  - Bebida: Coquinha Gelada \n\
-  - Sobremesa: Pudim \n\
+  - Prato: ${newNameFood} \n\
+  - Bebida: ${newNameDrink} \n\
+  - Sobremesa: ${newNameDesert} \n\
   Total: R$ 27.70  \n\
 
   Nome: ${nameClient}
