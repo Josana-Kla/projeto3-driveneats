@@ -52,21 +52,21 @@ function searchPriceFood(element) {
   let priceFood = element.children[3].children[0].children[0];
   let priceContent = priceFood.innerHTML;
   let priceReplace = priceContent.replace(",", ".");
-  newPriceFood = Number(priceReplace);
+  newPriceFood = (Number(priceReplace)).toFixed(2);
 }
 
 function searchPriceDrink(element) {
   let priceDrink = element.children[3].children[0].children[0];
   let priceContent = priceDrink.innerHTML;
   let priceReplace = priceContent.replace(",", ".");
-  newPriceDrink = Number(priceReplace);
+  newPriceDrink = (Number(priceReplace)).toFixed(2);
 }
 
 function searchPriceDesert(element) {
   let priceDesert = element.children[3].children[0].children[0];
   let priceContent = priceDesert.innerHTML;
   let priceReplace = priceContent.replace(",", ".");
-  newPriceDesert = Number(priceReplace);
+  newPriceDesert = (Number(priceReplace)).toFixed(2);
 }
 
 let newNameFood;
@@ -90,7 +90,7 @@ function searchNameDesert(element) {
 
 let total; 
 function totalOrder() {
-  total = newPriceFood.replace("," , ".") + Number(newPriceDrink) + Number(newPriceDesert);
+  total = newPriceFood + newPriceDrink + newPriceDesert;
 }
 
 let drinkSelected;
@@ -217,7 +217,7 @@ function yourOrder() {
   - Prato: ${newNameFood} \n\
   - Bebida: ${newNameDrink} \n\
   - Sobremesa: ${newNameDesert} \n\
-  Total: R$ 27.70  \n\
+  Total: R$ ${total} \n\
 
   Nome: ${nameClient}
   Endereço: ${adressClient}
