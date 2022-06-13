@@ -23,7 +23,7 @@ function selectFood(element) {
   food = element.innerHTML;
 
   foodSelected = document.querySelector('.food-one h4').innerHTML;
-  priceFoodSelected = document.querySelector('.price-food-one span').innerHTML;
+  priceFoodSelected = document.querySelector('.price-food span').innerHTML;
  
   let buttonClicked = document.querySelector('.select'); /* peguei o elemento que tem a classe select, por enquanto, nenhum */
   document.querySelector('.actived');
