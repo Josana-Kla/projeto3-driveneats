@@ -50,17 +50,23 @@ let newPriceDesert;
 
 function searchPriceFood(element) {
   let priceFood = element.children[3].children[0].children[0];
-  newPriceFood = priceFood.innerHTML;
+  let priceContent = priceFood.innerHTML;
+  let priceReplace = priceContent.replace(",", ".");
+  newPriceFood = Number(priceReplace);
 }
 
 function searchPriceDrink(element) {
   let priceDrink = element.children[3].children[0].children[0];
-  newPriceDrink = priceDrink.innerHTML;
+  let priceContent = priceDrink.innerHTML;
+  let priceReplace = priceContent.replace(",", ".");
+  newPriceDrink = Number(priceReplace);
 }
 
 function searchPriceDesert(element) {
   let priceDesert = element.children[3].children[0].children[0];
-  newPriceDesert = priceDesert.innerHTML;
+  let priceContent = priceDesert.innerHTML;
+  let priceReplace = priceContent.replace(",", ".");
+  newPriceDesert = Number(priceReplace);
 }
 
 let newNameFood;
