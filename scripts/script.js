@@ -1,14 +1,3 @@
-/*
-function finalPrice() {
-  var firstDish = preçoVindoDoPrato; 
-  var drink = preçoVindoDaBebida;
-  var desert = preçoVindoDaSobremesa;
-
-  var sum = firstDish + drink + desert;
-  alert("O preço final é: " + sum);
-}
-*/
-
 let food;
 let drink;
 let desert;
@@ -88,19 +77,8 @@ function searchNameDesert(element) {
   newNameDesert = nameDesert.innerHTML;
 }
 
-let total; 
-function totalOrder() {
-  total = newPriceFood + newPriceDrink + newPriceDesert;
-}
-
-let drinkSelected;
-let priceDrinkSelected;
-
 function selectDrink(element) {
   drink = element.innerHTML;
-
-  drinkSelected = document.querySelector('.drink-one h4').innerHTML;
-  priceDrinkSelected = document.querySelector('.price-drink-one span').innerHTML;
 
   let buttonClicked = document.querySelector('.select-drink .select');
 
@@ -151,7 +129,6 @@ function iconSelected(element, currentIcon) {
   }
  
   icon.classList.add("active-ion-icon");
-  /*document.querySelector(".line-options .select ion-icon").classList.add(".select .active-ion-icon");*/
 }
 
 
@@ -169,11 +146,11 @@ function checkPreviousSelection() {
   } 
 }
 
-
+let sumPrices;
 function closeOrder() {
   orderWindow = document.querySelector(".new-window").classList.remove("hidden");
 
-  /* COMIDAS - PEGAR NOMES */
+  /* COMIDAS - PEGAR NOME ATUAL */
   let firstNameFoodOrder = document.querySelector(".food-confirmation");
   firstNameFoodOrder.innerHTML = `${newNameFood}`;
 
@@ -182,7 +159,7 @@ function closeOrder() {
   firstPriceFoodOrder.innerHTML = `${newPriceFood}`;
 
 
-  /* BEBIDAS - PEGAR NOMES */
+  /* BEBIDAS - PEGAR NOME ATUAL */
   let firstNameDrinkOrder = document.querySelector(".drink-confirmation");
   firstNameDrinkOrder.innerHTML = `${newNameDrink}`;
 
@@ -191,7 +168,7 @@ function closeOrder() {
   firstPriceDrinkOrder.innerHTML = `${newPriceDrink}`;
 
 
-  /* SOBREMESAS - PEGAR NOMES */
+  /* SOBREMESAS - PEGAR NOME ATUAL */
   let firstNameDesertOrder = document.querySelector(".desert-confirmation");
   firstNameDesertOrder.innerHTML = `${newNameDesert}`;
 
@@ -199,8 +176,9 @@ function closeOrder() {
   let firstPriceDesertOrder = document.querySelector(".price-desert-confirmation");
   firstPriceDesertOrder.innerHTML = `${newPriceDesert}`;
 
-  let totalFinal = document.querySelector(".total");
-  totalFinal.innerHTML = `${total}`;
+  /* SOMA DOS PREÇOS DOS PEDIDOS ESCOLHIDOS */
+  sumPrices = (Number(newPriceFood) + Number(newPriceDrink) + Number(newPriceDesert)).toFixed(2);
+  document.querySelector(".total").innerHTML = sumPrices;
 }
 
 /* CONFIRMAR E IR PARA O WHATSAPP: */
@@ -217,7 +195,7 @@ function yourOrder() {
   - Prato: ${newNameFood} \n\
   - Bebida: ${newNameDrink} \n\
   - Sobremesa: ${newNameDesert} \n\
-  Total: R$ ${total} \n\
+  Total: R$ ${sumPrices} \n\
 
   Nome: ${nameClient}
   Endereço: ${adressClient}
